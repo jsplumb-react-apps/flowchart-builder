@@ -102,7 +102,7 @@ export default function FlowchartComponent() {
                 events: {
                     [EVENT_TAP]: (params) => {
                         // if zero nodes currently selected, or the shift key wasnt pressed, make this node the only one in the selection.
-                        if (toolkit.current.getSelection()._nodes.length < 1 || params.e.shiftKey !== true) {
+                        if (toolkit.current.getSelection().getNodes().length < 1 || params.e.shiftKey !== true) {
                             toolkit.current.setSelection(params.obj)
                         } else {
                             // if multiple nodes already selected, or shift was pressed, add this node to the current selection.
